@@ -1,5 +1,30 @@
 <!-- HTML !-->
-<button class="button-3" role="button">Button 3</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Data Sharing</title>
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>P2P Data Sharing</h1>
+        <input type="text" id="dataInput" placeholder="Enter some data">
+        <button onclick="sendData()">Send Data</button>
+        <button onclick="connectPeer()">Connect to Peer</button>
+        <div id="output"></div>
+    </center>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<button class="button-3" role="button">new token +</button>
 
 <style>
 /* CSS */
