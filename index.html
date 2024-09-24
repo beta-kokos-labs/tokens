@@ -27,3 +27,40 @@
 <button class="button-3" role="button">new token +</button>
 
 <link href='style.css' rel='stylesheet'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <style>
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>QR Code Generator</h1>
+    <input type="text" id="qr-input" placeholder="Enter text or URL" />
+    <button id="generate">Generate QR Code</button>
+    <div id="qrcode"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#generate').click(function() {
+                var qrData = $('#qr-input').val();
+                $('#qrcode').empty(); // Clear previous QR code
+                $('#qrcode').qrcode({
+                    text: qrData,
+                    width: 200,
+                    height: 200
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
