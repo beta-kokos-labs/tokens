@@ -3,6 +3,7 @@ let conn;
 
 peer.on('open', (id) => {
     console.log('My peer ID is: ' + id);
+    document.getElementById('inputField').value=id
     alert('Your peer ID is: ' + id);
 });
 
