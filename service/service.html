@@ -52,7 +52,7 @@
         <input type="text" id="inputField" readonly>
         <button id="copyButton">Copy</button><br>
             <div id="qrcode"></div>
-    </div>        
+    </div>
     <script>
         const inputField = document.getElementById('inputField');
         const copyButton = document.getElementById('copyButton');
@@ -62,16 +62,20 @@
             document.execCommand('copy'); // Copy the selected text to the clipboard
             alert('Text copied!'); // Optional: Show a notification to the user
         });
-                $(document).ready(function() {$('#inputField').change(function() {
-                var qrData = document.getElementById("demo");
-                $('#qrcode').empty(); // Clear previous QR code
+    $(document).ready(function() {
+        $('#inputField').on('input', function() {
+            var qrData = $(this).val();
+            $('#qrcode').empty(); // Clear previous QR code
+            if (qrData) {
                 $('#qrcode').qrcode({
                     text: qrData,
                     width: 200,
                     height: 200
                 });
-            });
-                                             });
+            }
+        });
+    });
+                                             
     </script>
 </body>
 </html>
