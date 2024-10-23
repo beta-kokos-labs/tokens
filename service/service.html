@@ -64,7 +64,7 @@
         });
     $(document).ready(function() {
         $('#inputField').on('input', function() {
-            var qrData = $(this).val();
+            var qrData = 'https://beta-kokos-labs.github.io/tokens/service/service.html?id='+$(this).val();
             $('#qrcode').empty(); // Clear previous QR code
             if (qrData) {
                 $('#qrcode').qrcode({
